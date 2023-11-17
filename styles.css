@@ -10,5 +10,31 @@ body {
 .main-container {
     width: 450px;
     height: 900px;
-    border: solid red 1px;
+    border: solid #e4002b 5px;
+    border-radius: 20px;
 }
+
+.rtl {
+    direction: rtl;
+}
+
+.button {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.button-row {
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.output-container {
+    height: 40%;
+}
+
+.button-container {
+    height: 60%;
+}
+
