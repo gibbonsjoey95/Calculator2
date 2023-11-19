@@ -10,8 +10,8 @@
 <body>
     <div class="main-container">   
         <div class="output-container">
-            <input type="text" id="outputField" class="rtl" readonly>
-            <input type="text" id="outputFieldResult" class="rtl" readonly>
+            <textarea type="text" id="outputField" class="output-field rtl" readonly></textarea>
+            <textarea type="text" id="outputFieldResult" class="output-field-result rtl" readonly></textarea>
         </div>
         <div class="button-container">
             <div class="button-row">
@@ -46,7 +46,7 @@
                 <button class="button">+/-</button>
                 <button class="button">0</button>
                 <button class="button">.</button>
-                <button class="button">=</button>
+                <button class="button" id="equalButton">=</button>
             </div>
         </div>
     </div>
