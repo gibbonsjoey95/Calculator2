@@ -1,24 +1,29 @@
-const buttons = document.querySelectorAll("button")
+const operator_button = document.querySelectorAll(".operator-button")
 const outputField = document.getElementById("outputField")
 const outputFieldResult = document.getElementById("outputFieldResult")
 const equalButton = document.getElementById("equalButton")
 
 let output = ''
-let outputResult = ''
 
 equalButton.addEventListener('click', function(){
-    output = outputResult
-    outputResult = ''
+    console.log('output', output)
+
+    outputField.value = outputFieldResult.value
+    output = outputField.value
+
+    outputFieldResult.value = ''
+
+    console.log('output2', output)
 })
 
-buttons.forEach((button) => {
+
+operator_button.forEach((button) => {
     button.addEventListener('click', function(){
         output += this.textContent
         outputField.value = output
-        outputFieldResult.value = calculateEquation(output)
+
+        if(!isNaN(parseInt(output[0])) && !isNaN(parseInt(output.slice(-1)))){
+            outputFieldResult.value = eval(output)
+        }
     })
 })
-
-const calculateEquation = (equation) => {
-    return eval(equation)
-}
