@@ -12,10 +12,12 @@ body {
     height: 900px;
     border: solid #e4002b 5px;
     border-radius: 20px;
+    background-color: black;
 }
 
 .rtl {
     text-align: right;
+    color: white;
 }
 
 .button {
@@ -43,6 +45,7 @@ body {
     font-size: 50px;
     overflow: hidden;
     resize: none;
+    background-color: black;
 }
 
 .button-container {
